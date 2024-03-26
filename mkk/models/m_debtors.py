@@ -1,9 +1,12 @@
 from django.db import models
-from .m_debtors import department
+from .m_department import department
 
 # Create your models here.
 class debtors(models.Model):
-    department = models.ForeignKey(department, on_delete=models.CASCADE)
+    department = models.ForeignKey("department",
+                                   null=True,
+                                   on_delete=models.PROTECT,
+                                   verbose_name = 'Подразделение')
     surname = models.CharField(verbose_name = 'Фамилия',
                                max_length=30,
                                help_text="Введи фамилию")

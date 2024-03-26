@@ -4,6 +4,7 @@ from django.db import models
 class department(models.Model):
     name = models.CharField(verbose_name = 'Имя',
                             max_length=50,
+                            null=True,
                             help_text="Введи имя")
     letter = models.CharField(verbose_name = 'Буква отделения',
                               max_length=10,
