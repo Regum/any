@@ -12,6 +12,11 @@ psycopg2 = "^2.9.9"
 pymorphy2 = "^0.9.1"
 environs = {extras = ["django"], version = "^11.0.0"}
 
+[tool.poetry.scripts]
+start = 'runserver:runserver'
+makemigrations = 'runserver:makemigrations'
+migrate = 'runserver:migrate'
+
 
 [build-system]
 requires = ["poetry-core"]
