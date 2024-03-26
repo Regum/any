@@ -3,13 +3,13 @@ from django.template.response import TemplateResponse
 
 # Create your views here.
 def index(request):
-    return TemplateResponse(request, 'index.html')
+    return render(request, "index.html")
 
 
 
 def debtors(request):
-    return TemplateResponse(request, 'debtors.html')
+    return render(request, "debtors.html")
 
 
 def departments(request):
-    return TemplateResponse(request, 'departments.html')
+    return render(request, "departments.html")
