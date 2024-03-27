@@ -9,4 +9,41 @@
 <h1>Список должников</h1>
 {% endblock header %}
 
-{% block body %}{% endblock body %}
+{% block body %}
+{% for debtors in all_debtors %}
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Имя</th>
+          <th scope="col">Фамилия</th>
+          <th scope="col">Отчество</th>
+          <th scope="col">Дата рождения</th>
+          <th scope="col">Место рождения</th>
+          <th scope="col">Номер договора</th>
+          <th scope="col">Дата займа</th>
+          <th scope="col">Сумма займа</th>
+          <th scope="col">Подразделение</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ debtors.id }}</td>
+        <td>{{ debtors.name }}</td>
+        <td>{{ debtors.surname }}</td>
+        <td>{{ debtors.lastname }}</td>
+        <td>{{ debtors.date_birth }}</td>
+        <td>{{ debtors.place_birth }}</td>
+        <td>{{ debtors.contract_number }}</td>
+        <td>{{ debtors.agreement_date }}</td>
+        <td>{{ debtors.loan_amount }}</td>
+        <td>{{ debtors.department_id }}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+{% endfor %}
+
+{% endblock body %}

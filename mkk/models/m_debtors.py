@@ -2,7 +2,7 @@ from django.db import models
 from .m_department import department
 
 # Create your models here.
-class debtors(models.Model):
+class m_debtors(models.Model):
     department = models.ForeignKey("department",
                                    null=True,
                                    on_delete=models.PROTECT,

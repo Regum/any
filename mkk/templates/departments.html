@@ -10,4 +10,27 @@
 {% endblock header %}
 
 
-{% block body %}{% endblock body %}
+{% block body %}
+{% for departments in all_departments %}
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Название</th>
+          <th scope="col">Буква</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ departments.id }}</td>
+        <td>{{ departments.name }}</td>
+        <td>{{ departments.letter }}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+{% endfor %}
+{% endblock body %}

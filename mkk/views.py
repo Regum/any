@@ -3,6 +3,10 @@ from django.views.generic.edit import CreateView
 from . forms.f_add_debtors import add_debtors_form
 from . forms.f_add_departments import add_department_form
 from django.urls import reverse_lazy
+from . models.m_debtors import m_debtors
+from . models.m_department import department
+
+
 
 # Create your views here.
 def index(request):
@@ -10,11 +14,19 @@ def index(request):
 
 
 def debtors(request):
-    return render(request, "debtors.html")
+    all_debtors = m_debtors.objects.all()
+    context = {
+        'all_debtors': all_debtors
+    }
+    return render(request, "debtors.html", context)
 
 
 def departments(request):
-    return render(request, "departments.html")
+    all_departments = department.objects.all()
+    context = {
+        'all_departments': all_departments
+    }
+    return render(request, "departments.html", context)
 
 
 class add_debtors_CreateView(CreateView):
