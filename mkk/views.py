@@ -32,7 +32,7 @@ def departments(request):
 class add_debtors_CreateView(CreateView):
     template_name = 'add_debtors.html'
     form_class = add_debtors_form
-    success_url = reverse_lazy('add_debtors')
+    success_url = reverse_lazy('debtors')
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
