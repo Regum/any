@@ -52,3 +52,8 @@ class m_debtors(models.Model):
     
     def __str__(self):
         return self.name # TODO
+    
+
+    class Meta:
+        verbose_name = u'Должник'
+        verbose_name_plural = u'Должники'

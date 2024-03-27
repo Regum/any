@@ -12,8 +12,18 @@
 {% block body %}
 <form action="#" method="post">
     {% csrf_token %}
-    {{ form.as_p}}
+    <div>
+        {% for field in form %}
+        <div>
+            {{field.label_tag}}
+            <div>{{field}}</div>
+        </div>
+        {% endfor %}
+        </div>
+    <div>
     <input type="submit" value="Добавить">
+    </div>
 </form>
+
 
 {% endblock body %}
