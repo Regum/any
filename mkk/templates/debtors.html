@@ -6,44 +6,43 @@
 
 
 {% block header %}
-<h1>Список должников</h1>
+<h1 class="text-center">Список должников</h1>
 {% endblock header %}
 
 {% block body %}
-{% for debtors in all_debtors %}
+
 <table class="table">
     <thead>
         <tr>
-          <th scope="col">id</th>
-          <th scope="col">Имя</th>
+          <th scope="col-6">№</th>
           <th scope="col">Фамилия</th>
+          <th scope="col">Имя</th>
           <th scope="col">Отчество</th>
-          <th scope="col">Дата рождения</th>
-          <th scope="col">Место рождения</th>
           <th scope="col">Номер договора</th>
-          <th scope="col">Дата займа</th>
           <th scope="col">Сумма займа</th>
-          <th scope="col">Подразделение</th>
+          <th scope="col">Процент</th>
+          <th scope="col">Гос пошлина</th>
+          <th scope="col">Итого</th>
         </tr>
     </thead>
-    <tbody>
-    <tr>
+    
+    <tbody >
+        
+        {% for debtors in all_debtors %}
+    <tr >
         <td>{{ debtors.id }}</td>
-        <td>{{ debtors.name }}</td>
         <td>{{ debtors.surname }}</td>
+        <td>{{ debtors.name }}</td>
         <td>{{ debtors.lastname }}</td>
-        <td>{{ debtors.date_birth }}</td>
-        <td>{{ debtors.place_birth }}</td>
         <td>{{ debtors.contract_number }}</td>
-        <td>{{ debtors.agreement_date }}</td>
         <td>{{ debtors.loan_amount }}</td>
-        <td>{{ debtors.department_id }}</td>
+        <td>{{ debtors.interest }}</td>
+        <td>{{ debtors.state_duty }}</td>
+        <td>{{ debtors.total }}</td>
     </tr>
+    {% endfor %}
     </tbody>
 </table>
 
-
-
-{% endfor %}
 
 {% endblock body %}

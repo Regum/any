@@ -9,3 +9,13 @@ class department(models.Model):
     letter = models.CharField(verbose_name = 'Буква отделения',
                               max_length=10,
                                 help_text="Введи имя")
+    
+
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u'Подразделение'
+        verbose_name_plural = u'Подразделения'

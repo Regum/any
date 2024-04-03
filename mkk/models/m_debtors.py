@@ -33,25 +33,31 @@ class m_debtors(models.Model):
     state_duty = models.FloatField(verbose_name ='Пошлина',
                                    help_text="Считает автоматом",
                                    default = 0.0)
-    total_amount = models.FloatField(verbose_name ='Итого',
+    total = models.FloatField(verbose_name ='Итого',
                                      help_text="Считает автоматом",
                                      default = 0.0)
     
-    
-    
-    def calculate(self):
-        self.interest = self.loan_amount * 1.5
-        self.total = self.loan_amount + self.interest
-        if self.total > 20000:
-            self.state_duty = ((self.total * 4) / 100) / 2
-            self.state_duty = max(self.state_duty, 200)  
+    def save(self, *args, **kwargs):
+        # Расчет процентов
+        self.interest = self.loan_amount * 0.5  # Сумма займа * 1.5, как вы описали
+
+        # Расчет итого
+        self.total = self.loan_amount + self.interest  # Сумма займа + Проценты
+
+        # Расчет пошлины
+        if self.total < 20000:
+            duty_temp = ((self.total * 4) / 100) / 2
+            self.state_duty = max(duty_temp, 200)  # Округление по формуле
+
         else:
-            self.state_duty = self.total - 20000
-            self.state_duty = (self.state_duty * (3 * 100 + 800))
-    
+            temp_total = self.total - 20000
+            duty_temp = ((temp_total * 3) / 100 + 800) / 2
+            self.state_duty = duty_temp
+
+        super(m_debtors, self).save(*args, **kwargs)
     
     def __str__(self):
-        return self.name # TODO
+        return self.name
     
 
     class Meta:
