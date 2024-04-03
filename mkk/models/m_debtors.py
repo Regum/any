@@ -39,7 +39,7 @@ class m_debtors(models.Model):
     
     def save(self, *args, **kwargs):
         # Расчет процентов
-        self.interest = self.loan_amount * 0.5  # Сумма займа * 1.5, как вы описали
+        self.interest = self.loan_amount * 1.5  # Сумма займа * 1.5, как вы описали
 
         # Расчет итого
         self.total = self.loan_amount + self.interest  # Сумма займа + Проценты
