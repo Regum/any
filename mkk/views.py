@@ -30,6 +30,9 @@ def departments(request):
     
     return render(request, "departments.html", context)
 
+def person(request):
+    return render(request, "person.html")
+
 
 class add_debtors_CreateView(CreateView):
     template_name = 'add_debtors.html'
@@ -51,3 +54,5 @@ class add_department_CreateView(CreateView):
         context = super().get_context_data(**kwargs)
         #context['department_id'].department.objects.all()
         return context
+    
+    

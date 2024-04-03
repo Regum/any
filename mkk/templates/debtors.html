@@ -44,7 +44,264 @@
     </tbody>
 </table>
 
-
+<section class="content">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title text-center">Список должников</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div id="jsGrid1" class="jsgrid" style="position: relative; height: 100%; width: 100%;">
+            <div class="jsgrid-grid-header jsgrid-header-scrollbar">
+                <table class="jsgrid-table">
+                    <tr class="jsgrid-header-row">
+                        <th class="jsgrid-header-cell jsgrid-header-sortable" style="width: 150px;">Name</th>
+                        <th class="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable" style="width: 50px;">Age</th>
+                        <th class="jsgrid-header-cell jsgrid-header-sortable" style="width: 200px;">Address</th>
+                        <th class="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style="width: 100px;">Country</th>
+                        <th class="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style="width: 100px;">Is Married</th>
+                    </tr><tr class="jsgrid-filter-row" style="display: none;"><td class="jsgrid-cell" style="width: 150px;"><input type="text"></td>
+                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;"><input type="number"></td><td class="jsgrid-cell" style="width: 200px;"><input type="text"></td>
+                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                            <select>
+                                <option value="0"></option>
+                                <option value="1">United States</option>
+                                <option value="2">Canada</option>
+                                <option value="3">United Kingdom</option>
+                                <option value="4">France</option>
+                                <option value="5">Brazil</option>
+                                <option value="6">China</option>
+                                <option value="7">Russia</option>
+                            </select>
+                        </td>
+                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                            <input type="checkbox" readonly=""></td>
+                        </tr>
+                        <tr class="jsgrid-insert-row" style="display: none;">
+                            <td class="jsgrid-cell" style="width: 150px;">
+                                <input type="text"></td>
+                                <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                    <input type="number"></td>
+                                    <td class="jsgrid-cell" style="width: 200px;">
+                                        <input type="text"></td>
+                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                            <select>
+                                                <option value="0"></option>
+                                                <option value="1">United States</option>
+                                                <option value="2">Canada</option>
+                                                <option value="3">United Kingdom</option>
+                                                <option value="4">France</option>
+                                                <option value="5">Brazil</option>
+                                                <option value="6">China</option>
+                                                <option value="7">Russia</option>
+                                            </select></td>
+                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                <input type="checkbox"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="jsgrid-grid-body" style="height: 821px;">
+                                        <table class="jsgrid-table">
+                                            <tbody>
+                                                <tr class="jsgrid-row">
+                                                    <td class="jsgrid-cell" style="width: 150px;">Valentine Brady</td>
+                                                    <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">72</td>
+                                                    <td class="jsgrid-cell" style="width: 200px;">8014 Enim. Road</td>
+                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Russia</td>
+                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                        <input type="checkbox" disabled=""></td>
+                                                    </tr>
+                                                    <tr class="jsgrid-alt-row">
+                                                        <td class="jsgrid-cell" style="width: 150px;">Rebecca Gardner</td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">57</td>
+                                                        <td class="jsgrid-cell" style="width: 200px;">8655 Arcu. Road</td>
+                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">France</td>
+                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                            <input type="checkbox" disabled=""></td>
+                                                        </tr>
+                                                        <tr class="jsgrid-row">
+                                                            <td class="jsgrid-cell" style="width: 150px;">Vladimir Tate</td>
+                                                            <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">26</td>
+                                                            <td class="jsgrid-cell" style="width: 200px;">130-1291 Non, Rd.</td>
+                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">United States</td>
+                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                <input type="checkbox" disabled=""></td>
+                                                            </tr>
+                                                            <tr class="jsgrid-alt-row">
+                                                                <td class="jsgrid-cell" style="width: 150px;">Vernon Hays</td>
+                                                                <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">56</td>
+                                                                <td class="jsgrid-cell" style="width: 200px;">964-5552 In Rd.</td>
+                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">France</td>
+                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                    <input type="checkbox" disabled=""></td>
+                                                                </tr>
+                                                                <tr class="jsgrid-row">
+                                                                    <td class="jsgrid-cell" style="width: 150px;">Allegra Hull</td>
+                                                                    <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">22</td>
+                                                                    <td class="jsgrid-cell" style="width: 200px;">245-8891 Donec St.</td>
+                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">France</td>
+                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                        <input type="checkbox" disabled=""></td>
+                                                                    </tr>
+                                                                    <tr class="jsgrid-alt-row">
+                                                                        <td class="jsgrid-cell" style="width: 150px;">Hu Hendrix</td>
+                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">65</td>
+                                                                        <td class="jsgrid-cell" style="width: 200px;">428-5404 Tempus Ave</td>
+                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Russia</td>
+                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                            <input type="checkbox" disabled=""></td>
+                                                                        </tr>
+                                                                        <tr class="jsgrid-row">
+                                                                            <td class="jsgrid-cell" style="width: 150px;">Kenyon Battle</td>
+                                                                            <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">32</td>
+                                                                            <td class="jsgrid-cell" style="width: 200px;">921-6804 Lectus St.</td>
+                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Canada</td>
+                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                <input type="checkbox" disabled=""></td>
+                                                                            </tr>
+                                                                            <tr class="jsgrid-alt-row">
+                                                                                <td class="jsgrid-cell" style="width: 150px;">Gloria Nielsen</td>
+                                                                                <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">24</td>
+                                                                                <td class="jsgrid-cell" style="width: 200px;">Ap #275-4345 Lorem, Street</td>
+                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">France</td>
+                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                    <input type="checkbox" disabled=""></td>
+                                                                                </tr>
+                                                                                <tr class="jsgrid-row">
+                                                                                    <td class="jsgrid-cell" style="width: 150px;">Illiana Kidd</td>
+                                                                                    <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">59</td>
+                                                                                    <td class="jsgrid-cell" style="width: 200px;">7618 Lacus. Av.</td>
+                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Canada</td>
+                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                        <input type="checkbox" disabled=""></td>
+                                                                                    </tr>
+                                                                                    <tr class="jsgrid-alt-row">
+                                                                                        <td class="jsgrid-cell" style="width: 150px;">Adria Todd</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">68</td>
+                                                                                        <td class="jsgrid-cell" style="width: 200px;">1889 Tincidunt Road</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">China</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                            <input type="checkbox" disabled="">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr class="jsgrid-row">
+                                                                                        <td class="jsgrid-cell" style="width: 150px;">Kirsten Mayo</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">71</td>
+                                                                                        <td class="jsgrid-cell" style="width: 200px;">100-8640 Orci, Avenue</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">United States</td>
+                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                            <input type="checkbox" disabled=""></td>
+                                                                                        </tr>
+                                                                                        <tr class="jsgrid-alt-row">
+                                                                                            <td class="jsgrid-cell" style="width: 150px;">Willa Hobbs</td>
+                                                                                            <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">60</td>
+                                                                                            <td class="jsgrid-cell" style="width: 200px;">P.O. Box 323, 158 Tristique St.</td>
+                                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">China</td>
+                                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                <input type="checkbox" disabled=""></td>
+                                                                                            </tr>
+                                                                                            <tr class="jsgrid-row">
+                                                                                                <td class="jsgrid-cell" style="width: 150px;">Alexis Clements</td>
+                                                                                                <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">69</td>
+                                                                                                <td class="jsgrid-cell" style="width: 200px;">P.O. Box 176, 5107 Proin Rd.</td>
+                                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Brazil</td>
+                                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                    <input type="checkbox" disabled=""></td>
+                                                                                                </tr>
+                                                                                                <tr class="jsgrid-alt-row">
+                                                                                                    <td class="jsgrid-cell" style="width: 150px;">Akeem Conrad</td>
+                                                                                                    <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">60</td>
+                                                                                                    <td class="jsgrid-cell" style="width: 200px;">282-495 Sed Ave</td>
+                                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Canada</td>
+                                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                        <input type="checkbox" disabled=""></td>
+                                                                                                    </tr>
+                                                                                                    <tr class="jsgrid-row">
+                                                                                                        <td class="jsgrid-cell" style="width: 150px;">Montana Silva</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">79</td>
+                                                                                                        <td class="jsgrid-cell" style="width: 200px;">P.O. Box 120, 9766 Consectetuer St.</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">China</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;"><input type="checkbox" disabled="">
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <tr class="jsgrid-alt-row">
+                                                                                                        <td class="jsgrid-cell" style="width: 150px;">Kaseem Hensley</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">77</td>
+                                                                                                        <td class="jsgrid-cell" style="width: 200px;">Ap #510-8903 Mauris. Av.</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">China</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;"><input type="checkbox" disabled="">
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <tr class="jsgrid-row">
+                                                                                                        <td class="jsgrid-cell" style="width: 150px;">Christopher Morton</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">35</td>
+                                                                                                        <td class="jsgrid-cell" style="width: 200px;">P.O. Box 234, 3651 Sodales Avenue</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Brazil</td>
+                                                                                                        <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                            <input type="checkbox" disabled=""></td>
+                                                                                                        </tr>
+                                                                                                        <tr class="jsgrid-alt-row">
+                                                                                                            <td class="jsgrid-cell" style="width: 150px;">Wade Fernandez</td>
+                                                                                                            <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">49</td>
+                                                                                                            <td class="jsgrid-cell" style="width: 200px;">740-5059 Dolor. Road</td>
+                                                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">China</td>
+                                                                                                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                                <input type="checkbox" disabled=""></td>
+                                                                                                            </tr>
+                                                                                                            <tr class="jsgrid-row">
+                                                                                                                <td class="jsgrid-cell" style="width: 150px;">Illiana Kirby</td>
+                                                                                                                <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">31</td>
+                                                                                                                <td class="jsgrid-cell" style="width: 200px;">527-3553 Mi Ave</td>
+                                                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Canada</td>
+                                                                                                                <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                                    <input type="checkbox" disabled=""></td>
+                                                                                                                </tr>
+                                                                                                                <tr class="jsgrid-alt-row">
+                                                                                                                    <td class="jsgrid-cell" style="width: 150px;">Kimberley Hurley</td>
+                                                                                                                    <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">65</td>
+                                                                                                                    <td class="jsgrid-cell" style="width: 200px;">P.O. Box 637, 9915 Dictum St.</td>
+                                                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">Brazil</td>
+                                                                                                                    <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">
+                                                                                                                        <input type="checkbox" disabled=""></td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </div>
+                                                                                                        <div class="jsgrid-pager-container">
+                                                                                                            <div class="jsgrid-pager">Pages: 
+                                                                                                                <span class="jsgrid-pager-nav-button">
+                                                                                                                    <a href="javascript:void(0);">First</a>
+                                                                                                                </span> 
+                                                                                                                <span class="jsgrid-pager-nav-button">
+                                                                                                                    <a href="javascript:void(0);">Prev</a>
+                                                                                                                </span> 
+                                                                                                                <span class="jsgrid-pager-page">
+                                                                                                                    <a href="javascript:void(0);">1</a>
+                                                                                                                </span>
+                                                                                                                <span class="jsgrid-pager-page">
+                                                                                                                    <a href="javascript:void(0);">2</a>
+                                                                                                                </span>
+                                                                                                                <span class="jsgrid-pager-page jsgrid-pager-current-page">3</span>
+                                                                                                                <span class="jsgrid-pager-page">
+                                                                                                                    <a href="javascript:void(0);">4</a></span>
+                                                                                                                    <span class="jsgrid-pager-page">
+                                                                                                                        <a href="javascript:void(0);">5</a>
+                                                                                                                    </span> 
+                                                                                                                    <span class="jsgrid-pager-nav-button">
+                                                                                                                        <a href="javascript:void(0);">Next</a>
+                                                                                                                    </span> 
+                                                                                                                    <span class="jsgrid-pager-nav-button">
+                                                                                                                        <a href="javascript:void(0);">Last</a>
+                                                                                                                    </span> &nbsp;&nbsp; 3 of 5 </div>
+                                                                                                                </div>
+                                                                                                                <div class="jsgrid-load-shader" style="display: none; position: absolute; inset: 0px; z-index: 1000;"></div>
+                                                                                                                <div class="jsgrid-load-panel" style="display: none; position: absolute; top: 50%; left: 50%; z-index: 1000;">Please, wait...</div>
+                                                                                                            </div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </section>
 
 
 
