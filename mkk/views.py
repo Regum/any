@@ -11,7 +11,7 @@ from pytrovich.enums import NamePart, Gender, Case
 from pytrovich.maker import PetrovichDeclinationMaker
 maker = PetrovichDeclinationMaker()
 from natasha import NamesExtractor, MorphVocab
-
+morph = pymorphy2.MorphAnalyzer()
 
 # Create your views here.
 def index(request):
