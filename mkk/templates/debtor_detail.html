@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+Должник
+{% endblock title %}
+
+
+
+
+{% block body %}
+
+<h1 class="text-center">Детали должника - {{ debtor.surname }}</h1>
+
+<table class="table table-bordered border-primary">
+
+  <thead>
+    <tr>
+        <th scope="col-6">Параметр</th>
+        <th scope="col-6">Информация по должнику</th>
+        <th scope="col-6">ФИО в родительном</th>
+        <th scope="col-6">ФИО в винительном</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row">Фамилия</th>
+        <th>{{ debtor.surname }}</th>
+        <th>{{ debtor_genitive_surname }}</th>
+        <th>{{ debtor_accusative_surname }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Имя</th>
+        <th>{{ debtor.name }}</th>
+        <th>{{ debtor_genitive_name }}</th>
+        <th>{{ debtor_accusative_name }}</th>
+
+    </tr>
+    <tr>
+        <th scope="row">Отчество</th>
+        <th>{{ debtor.lastname }}</th>
+        <th>{{ debtor_genitive_lastname }}</th>
+        <th>{{ debtor_accusative_lastname }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Дата рождения</th>
+        <th>{{ debtor.date_birth }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Место рождения</th>
+        <th>{{ debtor.place_birth }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Номер договора</th>
+        <th>{{ debtor.contract_number }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Дата займа</th>
+        <th>{{ debtor.agreement_date }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Сумма займа</th>
+        <th>{{ debtor.loan_amount }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Процент</th>
+        <th>{{ debtor.interest }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Пошлина</th>
+        <th>{{ debtor.state_duty }}</th>
+    </tr>
+    <tr>
+        <th scope="row">Итого</th>
+        <th>{{ debtor.total }}</th>
+    </tr>
+
+  
+
+  </tbody>
+</table>
+
+
+{% endblock body %}

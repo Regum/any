@@ -9,8 +9,10 @@ readme = "README.md"
 python = "^3.11"
 django = "^5.0.3"
 psycopg2 = "^2.9.9"
-pymorphy2 = "^0.9.1"
 environs = {extras = ["django"], version = "^11.0.0"}
+pymorphy2 = "^0.9.1"
+pytrovich = "^0.0.4"
+natasha = "^1.6.0"
 
 [tool.poetry.scripts]
 start = 'runserver:runserver'
