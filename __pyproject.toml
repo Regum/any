@@ -8,11 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^5.0.3"
-psycopg2 = "^2.9.9"
-environs = {extras = ["django"], version = "^11.0.0"}
-pymorphy2 = "^0.9.1"
-pytrovich = "^0.0.4"
-natasha = "^1.6.0"
+psycopg2--binary = "^2.9.9"
+python-dotenv = "^1.0.1"
+
 
 [tool.poetry.scripts]
 start = 'runserver:runserver'

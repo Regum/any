@@ -1,16 +1,14 @@
-from environs import Env
+from dotenv import load_dotenv
 from pathlib import Path
 import os
 
-env = Env()
-env.read_env()
-
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 #DEBUG = env.bool("DEBUG", default=False)
 
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 
 ALLOWED_HOSTS = []
@@ -19,6 +17,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "adminlte3",
+    "adminlte3_theme",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
