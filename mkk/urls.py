@@ -1,5 +1,12 @@
 from django.urls import path, re_path
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
+
 from . import views
+
 
 
 urlpatterns = [
@@ -10,4 +17,4 @@ urlpatterns = [
     re_path(r'^departments', views.departments, name='departments'),
     path('add_department/', views.add_department_CreateView.as_view(), name='add_department'),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -9,8 +9,14 @@
 
 {% block body %}
 
-<h1 class="text-center">Детали должника - {{ debtor.surname }}</h1>
+<div class="container">
+<h1 class="text-center">Детали должника - {{ debtors.surname }}</h1>
 
+<div class="btn-group justify-content-md-end" role="group" aria-label="Простой пример">
+    <button type="button" class="btn btn-primary">Левая</button>
+    <button type="button" class="btn btn-primary">Средняя</button>
+    <button type="button" class="btn btn-primary">Правая</button>
+</div>
 <table class="table table-bordered border-primary">
 
   <thead>
@@ -24,60 +30,68 @@
   <tbody>
     <tr>
         <th scope="row">Фамилия</th>
-        <th>{{ debtor.surname }}</th>
-        <th>{{ debtor_genitive_surname }}</th>
-        <th>{{ debtor_accusative_surname }}</th>
+        <th>{{ debtors.surname }}</th>
+        <th>{{ declined_surname_g }}</th>
+        <th>{{ declined_surname_a }}</th>
     </tr>
     <tr>
         <th scope="row">Имя</th>
-        <th>{{ debtor.name }}</th>
-        <th>{{ debtor_genitive_name }}</th>
-        <th>{{ debtor_accusative_name }}</th>
+        <th>{{ debtors.name }}</th>
+        <th>{{ declined_name_g }}</th>
+        <th>{{ declined_name_a }}</th>
 
     </tr>
     <tr>
         <th scope="row">Отчество</th>
-        <th>{{ debtor.lastname }}</th>
-        <th>{{ debtor_genitive_lastname }}</th>
-        <th>{{ debtor_accusative_lastname }}</th>
+        <th>{{ debtors.lastname }}</th>
+        <th>{{ declined_lastname_g }}</th>
+        <th>{{ declined_lastname_a }}</th>
     </tr>
     <tr>
         <th scope="row">Дата рождения</th>
-        <th>{{ debtor.date_birth }}</th>
+        <th>{{ debtors.date_birth }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Место рождения</th>
-        <th>{{ debtor.place_birth }}</th>
+        <th>{{ debtors.place_birth }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Номер договора</th>
-        <th>{{ debtor.contract_number }}</th>
+        <th>{{ debtors.contract_number }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Дата займа</th>
-        <th>{{ debtor.agreement_date }}</th>
+        <th>{{ debtors.agreement_date }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Сумма займа</th>
-        <th>{{ debtor.loan_amount }}</th>
+        <th>{{ debtors.loan_amount }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Процент</th>
-        <th>{{ debtor.interest }}</th>
+        <th>{{ debtors.interest }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Пошлина</th>
-        <th>{{ debtor.state_duty }}</th>
+        <th>{{ debtors.state_duty }}</th>
+        <th> </th>
     </tr>
     <tr>
         <th scope="row">Итого</th>
-        <th>{{ debtor.total }}</th>
+        <th>{{ debtors.total }}</th>
+        <th> </th>
     </tr>
 
   
 
   </tbody>
 </table>
-
+</div>
 
 {% endblock body %}

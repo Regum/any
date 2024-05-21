@@ -11,7 +11,7 @@
 
 
 {% block body %}
-{% for departments in all_departments %}
+
 <table class="table">
     <thead>
         <tr>
@@ -21,16 +21,18 @@
 
         </tr>
     </thead>
+    {% for departments in all_departments %}
     <tbody>
     <tr>
         <td>{{ departments.id }}</td>
         <td>{{ departments.name }}</td>
         <td>{{ departments.letter }}</td>
     </tr>
+    {% endfor %}
     </tbody>
 </table>
 
 
 
-{% endfor %}
+
 {% endblock body %}
