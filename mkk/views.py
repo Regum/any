@@ -1,4 +1,13 @@
 from django.shortcuts import render
+import os
+import shutil
+from docx import Document
+from django.http import FileResponse
+from django.conf import settings
+
+
+
+
 from django.views.generic.edit import CreateView
 from . forms.f_add_debtors import add_debtors_form
 from . forms.f_add_departments import add_department_form
@@ -81,5 +90,51 @@ class add_department_CreateView(CreateView):
         #context['department_id'].department.objects.all()
         return context
     
-    
 
+
+#TODO написать класс обрабатывающий файл
+class working_with_file(CreateView):
+
+
+
+    def download_filled_docs(self, request):
+        debtors = m_debtors.objects.get(id=pk)
+        # Винительный падеж
+        declined_surname_g = morph.parse(debtors.surname)[0].inflect({'gent'}).word
+        declined_name_g = morph.parse(debtors.name)[0].inflect({'gent'}).word
+        declined_lastname_g = morph.parse(debtors.lastname)[0].inflect({'gent'}).word
+        declined_surname_a = morph.parse(debtors.surname)[0].inflect({'accs'}).word
+        declined_name_a = morph.parse(debtors.name)[0].inflect({'accs'}).word
+        declined_lastname_a = morph.parse(debtors.lastname)[0].inflect({'accs'}).word
+        # Путь к исходному файлу
+        source_file_path = os.path.join(settings.MEDIA_ROOT, 'example.docx')
+        # Путь к копии файла, которую мы будем изменять
+        temp_file_path = os.path.join(settings.MEDIA_ROOT, 'temp_file.docx')
+        
+        # Копируем исходный файл в временную папку
+        shutil.copyfile(source_file_path, temp_file_path)
+        
+        # Открываем копию файла для редактирования
+        
+        doc = Document(temp_file_path)
+         # Заполняем информацию в файле по тэгам
+        # Это пример, вам нужно будет заменить 'your_tag' и 'your_info' на реальные тэги и информацию
+        for paragraph in doc.paragraphs:
+            if 'name' in paragraph.text:
+                paragraph.text = paragraph.text.replace('name', declined_name_a)
+            if 'surname' in paragraph.text:
+                paragraph.text = paragraph.text.replace('surname', declined_surname_a)
+            if 'lastname' in paragraph.text:
+                paragraph.text = paragraph.text.replace('lastname', declined_lastname_a)
+            
+        
+        # Сохраняем измененный файл
+        doc.save(temp_file_path)
+        
+        # Отправляем файл на скачивание
+        response = FileResponse(open(temp_file_path, 'rb'), as_attachment=True, filename='filled_file.docx')
+        return response
+
+    def get(self, request, *args, **kwargs):
+        # Вызываем функцию для скачивания и заполнения документа
+        return self.download_filled_docx(request)

@@ -14,7 +14,7 @@
 
 <div class="btn-group justify-content-md-end" role="group" aria-label="Простой пример">
     <button type="button" class="btn btn-primary">Скачать PDF</button>
-    <button type="button" class="btn btn-primary">Скачать Word</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='{% url 'download' %}'">Скачать Word</button>
     <button type="button" class="btn btn-primary">Печать</button>
 </div>
 <table class="table table-bordered border-primary">
