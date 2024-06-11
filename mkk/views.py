@@ -98,14 +98,14 @@ class working_with_file(CreateView):
 
 
     def download_filled_docs(self, request):
-        debtors = m_debtors.objects.get(id=pk)
+        #debtors = m_debtors.objects.get(id=pk)
         # Винительный падеж
-        declined_surname_g = morph.parse(debtors.surname)[0].inflect({'gent'}).word
-        declined_name_g = morph.parse(debtors.name)[0].inflect({'gent'}).word
-        declined_lastname_g = morph.parse(debtors.lastname)[0].inflect({'gent'}).word
-        declined_surname_a = morph.parse(debtors.surname)[0].inflect({'accs'}).word
-        declined_name_a = morph.parse(debtors.name)[0].inflect({'accs'}).word
-        declined_lastname_a = morph.parse(debtors.lastname)[0].inflect({'accs'}).word
+        # declined_surname_g = morph.parse(debtors.surname)[0].inflect({'gent'}).word
+        # declined_name_g = morph.parse(debtors.name)[0].inflect({'gent'}).word
+        # declined_lastname_g = morph.parse(debtors.lastname)[0].inflect({'gent'}).word
+        declined_surname_a = "Gartman"
+        declined_name_a ="Roman"
+        declined_lastname_a = "Olegovich"
         # Путь к исходному файлу
         source_file_path = os.path.join(settings.MEDIA_ROOT, 'example.docx')
         # Путь к копии файла, которую мы будем изменять
@@ -137,4 +137,4 @@ class working_with_file(CreateView):
 
     def get(self, request, *args, **kwargs):
         # Вызываем функцию для скачивания и заполнения документа
-        return self.download_filled_docx(request)
+        return self.download_filled_docs(request)
